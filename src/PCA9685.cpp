@@ -1,4 +1,4 @@
-/*  Arduino Library for the PCA9685 16-Channel PWM Driver Module.
+﻿/*  Arduino Library for the PCA9685 16-Channel PWM Driver Module.
     Copyright (c) 2016 NachtRaveVL      <nachtravevl@gmail.com>
     Copyright (C) 2012 Kasper Skårhøj   <kasperskaarhoj@gmail.com>
 
@@ -23,6 +23,9 @@
 */
 
 #include "PCA9685.h"
+#ifdef SPARK
+#define BUFFER_LENGTH 32
+#endif
 
 #define PCA9685_I2C_BASE_ADDRESS    (byte)0x40
 

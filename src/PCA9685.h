@@ -1,4 +1,4 @@
-/*  Arduino Library for the PCA9685 16-Channel PWM Driver Module.
+﻿/*  Arduino Library for the PCA9685 16-Channel PWM Driver Module.
     Copyright (c) 2016 NachtRaveVL      <nachtravevl@gmail.com>
     Copyright (C) 2012 Kasper Skårhøj   <kasperskaarhoj@gmail.com>
 
@@ -24,6 +24,8 @@
 
 #ifndef PCA9685_H
 #define PCA9685_H
+
+#include "Particle.h"
 
 // Library Setup
 
@@ -52,11 +54,8 @@
 // could potentially cause the servo to become jammed. See the PCA9685_ServoEvaluator
 // class to assist with calculating PWM values from Servo angle values.
 
-#if defined(ARDUINO) && ARDUINO >= 100
 #include <Arduino.h>
-#else
-#include <WProgram.h>
-#endif
+
 #ifndef PCA9685_ENABLE_SOFTWARE_I2C
 #include <Wire.h>
 #endif

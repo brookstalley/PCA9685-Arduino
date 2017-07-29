@@ -39,7 +39,7 @@
 //#define PCA9685_EXCLUDE_SERVO_EVAL      1
 
 // Uncomment this define to enable debug output.
-//#define PCA9685_ENABLE_DEBUG_OUTPUT     1
+// #define PCA9685_ENABLE_DEBUG_OUTPUT     1
 
 // Servo Control Note
 // Many 180 degree controlled digital servos run on a 20ms pulse width (50Hz update
@@ -207,4 +207,4 @@ private:
 
 #endif
 
-#endif 
+#endif

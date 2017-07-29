@@ -27,6 +27,8 @@
 #define BUFFER_LENGTH 32
 #endif
 
+
+
 #define PCA9685_I2C_BASE_ADDRESS    (byte)0x40
 
 // Register addresses from data sheet
@@ -485,7 +487,7 @@ void PCA9685::getPhaseCycle(int channel, uint16_t pwmAmount, uint16_t *phaseBegi
     else {
         *phaseBegin = 0;
     }
-    
+
     // See datasheet section 7.3.3
     if (pwmAmount == 0) {
         // Full OFF => time_off[12] = 1;
@@ -832,7 +834,7 @@ uint16_t PCA9685_ServoEvaluator::pwmForAngle(float angle) {
             retVal = _coeff[4] + (_coeff[5] * angle) + (_coeff[6] * angle * angle) + (_coeff[7] * angle * angle * angle);
         }
     }
-    
+
     return (uint16_t)constrain((int)roundf(retVal), 0, PCA9685_PWM_FULL);
 };
 
